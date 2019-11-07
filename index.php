@@ -1,3 +1,4 @@
+<?php
 $msg = json_decode(file_get_contents('php://input'), true);
 if (isset($msg['message'])) {
   $msg = $msg['message'];
