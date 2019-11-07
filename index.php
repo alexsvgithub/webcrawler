@@ -7,7 +7,7 @@ if (isset($msg['message'])) {
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
   curl_setopt($curl, CURLOPT_POST, true);
-  curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(['chat_id' => $msg['chat']['id'], 'text' => 'Yo']));
+  curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode(['chat_id' => $msg['chat']['id'], 'text' => $msg['text']]));
   curl_exec($curl);
   curl_close($curl);
 }
